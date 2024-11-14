@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Casteria</title>
+    <link rel="stylesheet" href="./base.css" type="text/css">
+    </head>
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module">
+    import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
+    </script>
+
+<!-- <script>
+    const swiper = new Swiper('.swiper', {
+    slidesPerView:2,
+    spaceBetween:0,
+      loop: true,
+    
+      autoplay: {
+      delay: 3000,
+      },
+
+      pagination: {
+        el: '.swiper-pagination',
+      },
+
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+      scrollbar: {
+        el: '.swiper-scrollbar',
+      },
+      breakpoints:{
+        780:{
+          slidesPerView:2,
+        },
+        0:{
+          slidesPerView:1,
+        }
+      }
+  });
+    
+    $(function () {
+    $(window).scroll(function () {
+        const wHeight = $(window).height();
+        const wScroll = $(window).scrollTop();
+            $(".block").each(function () {
+                const bPosition = $(this).offset().top;
+            if (wScroll > bPosition - wHeight + 200) {
+                $(this).addClass("fadeIn");
+            }
+        });
+    });
+});
+
+
+$(function() {
+  var scrollPos;//topからのスクロール位置
+  $('.open-btn1').click(function() { //ボタンをクリックしたら
+
+    $(this).toggleClass('active');//ボタン自身に activeクラスを付与し
+    $('.p-sp-nav-bg').toggleClass('bg-active');//背景にbg-activeクラスを付与
+    $('#sp-g-nav').toggleClass('panel-active');//ナビにpanel-activeクラスを付与
+    
+    if($(this).hasClass('active')){//もしボタンにactiveクラスが付いていれば
+      scrollPos = $(window).scrollTop();//topからのスクロール位置を取得
+      $('body').addClass('fixed').css({ top: -scrollPos });//背景固定
+      
+    }else{//もしボタンにactiveクラスが無ければ
+      $('body').removeClass('fixed').css({ top: 0 });//背景固定を解除
+      $(window).scrollTop(scrollPos);//元の位置までスクロール
+    }
+  });
+  $('.sp-nav-close').click(function() { //背景をクリックしたら
+    $('.open-btn1').removeClass('active');//ボタンからactiveクラスを剥奪
+    $('#sp-g-nav').removeClass('panel-active');//ナビからpanel-activeクラスを剥奪
+    $('.p-sp-nav-bg').removeClass('bg-active');//背景からbg-activeクラスを剥奪
+    $('body').removeClass('fixed').css({ top: 0 });//背景固定を解除
+    $(window).scrollTop(scrollPos);//元の位置までスクロール
+  });    
+  $(window).keyup(function(e){//キーをクリックして
+    if(e.key === "Escape"){//ESCキーだったら
+      $('.open-btn1').removeClass('active');//ボタンからactiveクラスを剥奪
+      $('#sp-g-nav').removeClass('panel-active');//ナビからpanel-activeクラスを剥奪
+      $('.p-sp-nav-bg').removeClass('bg-active');//背景からbg-activeクラスを剥奪
+      $('body').removeClass('fixed').css({ top: 0 });//背景固定を解除
+      $(window).scrollTop(scrollPos);//元の位置までスクロール
+    }
+  });
+});
+</script>
+ -->
+
+<body>
+
+<div id="hooter">
+        <h1 id="sitename">Casteria</h1>
+        <menu id="menu1">
+            <label><button>Home</button></label>
+            <label><button>Food</button></label>
+            <label><button>Drink</button></label>
+            <label><button>お問合せ</button></label>
+            <input type="search" id="sarching1" name="search"/><button>search</button>
+        </menu>
+   
+
+    <!-- スマホ用のメニューバーと展開図 -->
+    <div class="l-sp-header_ham-menu">
+        <div class="menu-txt">MENU</div>
+        <div class="open-btn1"><span></span><span></span><span></span></div>
+      </div>
+
+        <!-- ナビの背景 -->
+    <div class="p-sp-nav-bg sp-nav-close"></div>
+    <!-- スマホ用グローバルナビ -->
+    <nav class="p-sp-nav" id="sp-g-nav">
+      <ul class="p-sp-nav_ul">
+        <li class="p-sp-nav_li">
+          <a href="#" class="p-sp-nav_a">HOME</a>
+        </li>
+        <li class="p-sp-nav_li">
+          <a href="#" class="p-sp-nav_a">Food</a>
+        </li>
+        <li class="p-sp-nav_li">
+          <a href="#" class="p-sp-nav_a">Drink</a>
+        </li>
+        <li class="p-sp-nav_li">
+          <a href="#" class="p-sp-nav_a">お問合せ</a>
+        </li>
+        <li class="p-sp-nav_li">
+            <input type="search" id="sarching2" name="search"/><button>search</button>
+        </li>
+      </ul>
+    </nav>
+</div>
+
+    <div class="swiper">
+
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img class="topfoods" src="../img/restaurant.jpg"></div>
+            <div class="swiper-slide"><img class="topfoods" src="../img/restaurant2.jpg"></div>
+            <div class="swiper-slide"><img class="topfoods" src="../img/food.jpg"></div>
+            <div class="swiper-slide"><img class="topfoods" src="../img/food2.jpg"></div>
+            <div class="swiper-slide"><img class="topfoods" src="../img/barista.jpg"></div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <div class="swiper-scrollbar"></div>
+    </div>
+
+      
+
+<div id="withcorona"><h1 id="bigtop">新型コロナウィルスに対する取り組み部分</h1>
+
+<details>
+  <summary class="topic">衛生面に関して</summary>
+    <ul class="cir">
+        <li>マスクを着用しての接客</li>
+        <li>出勤前の検温の徹底</li>
+        <li>レジカウンターやドリンク受け渡し口等への飛沫防止カードの設置</li>
+        <li>より頻度の高い手洗いうがいの励行</li>
+        <li>テーブルにお客様用の消毒アルコールの設置</li>
+        <li>従業員間の距離確保のため、休憩や研修時の客席利用</li>
+    </ul>
+</details>
+
+<details>
+    <summary class="topic">お客様へのご協力のお願い</summary>
+    <ul class="cir">
+        <li>店内では飲食時以外のマスク着用をお願い致します</li>
+        <li>入店時の手指の消毒にご協力ください</li>
+        <li>レジに並ぶ際、目安を示すフロアステッカーに沿った列感覚の確保にご協力ください</li>
+        <li>多数でお越しの際は、お1人がまとめてご注文願います(混雑時に入場制限をする場合がございます)</li>
+        <li>発熱や体調不良の際はご入店をお控えください</li>
+    </ul>
+</details>
+
+<details>
+    <summary class="topic">サービスに関して</summary>
+    <ul class="cir">
+        <li>直接お渡しする商品の提供、金銭授受時にグローブの着用</li>
+        <li>ドリンクやフードのサンプリング中止</li>
+        <li>地域活動・イベントの中止</li>
+        <li>混雑時間帯の客席の譲り合いへのご協力お願いの実施</li>
+        <li>店内設置しているミルク、はちみつ、パウダー類の一時引き下げ</li>
+        <li>混雑状況に応じたドライブスルーサービスの一時休止や店内客席利用の制限</li>
+    </ul>
+</details>
+
+<div class="blank"></div>
+
+<div id="adjustment">
+
+    <div class="block">
+        <h2 class="foods">Signature Food</h2>
+        <div class="explan">
+            <img class="expic" id="salmon2" src="../img/food.jpg">
+            <p class="index1">サーモンは刺身やカルパッチョで食べるのが美味しいですが、リッチな気分になれるサーモンステーキがおすすめです。サーモンのおいしさを引き立てる2種のソースも絶品です！</p>
+        </div>
+    </div>
+
+    <div class="block">
+        <h2 class="foods">Our Coffee</h2>
+        <div class="explan">
+            <img class="expic"  id="coffee1" src="../img/barista.jpg">
+            <p class="index1">当店のコーヒー豆が厳選して世界中から買い付けています。そして、そのコーヒー豆のおいしさを最大限に引き出すために自社のロースタリーで焙煎しています。</p>
+        </div>
+    </div>
+
+    <div class="block">
+        <h2 class="foods">Our Food</h2>
+        <div class="explan">
+            <img class="expic"  id="salad1" src="../img/food3.jpg">
+            <p class="index1">当店は何よりまずは衛生管理に気を付けています。「安全・安心」をお届けするために日々継続的な努力を惜しみません。</p>
+        </div>
+    </div>
+
+    <div class="block">
+        <div id="locate">
+            <div id="locindex">
+                <h3 id="address">Address</h3>
+                <p class="detailing">681 xxx Drive, xxxxx xxxx #01 - 06 000000<br><br>
+                Opening Hours</p>
+
+                <h3 id="times">Mondays-Friday: 10am - 9pm</h3>
+                <br>
+                <p class="parttime">Saturdays,Sundays&Public Holidays:9am-9pm</p>
+            </div>
+                <img id="coffee2" src="../img/barista.jpg">
+        </div>
+    </div>
+</div>
+
+    
+<div class="block">
+    <div id="lct">
+        <h3 id="introduction">店舗一覧</h3>
+        <div id="other">
+            <div class="loc">
+                <img class="otherpic" src="../img/restaurant2.jpg">
+                <p>東京都渋谷区 xxxxx-xxxx</p>
+            </div>
+
+            <div class="loc">
+                <img class="otherpic" src="../img/restaurant3.jpg">
+                <p>千葉県松戸市 xxxxx-xxxx</p>
+            </div>
+
+            <div class="loc">
+                <img class="otherpic" src="../img/restaurant4.jpg">
+                <p>神奈川県横浜市  xxxxx-xxxx</p>
+            </div>
+
+            <div class="loc">
+                <img class="otherpic" src="../img/restaurant5.jpg">
+                <p>埼玉県川崎市 xxxxx-xxxx</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div id="mindex">
+        <menu id="menu2">
+            <label><a href="">プライバシーポリシー</a></label>
+            <label><a href="">お問合せ</a></label>
+            <label><a href="">運営会社</a></label>
+        </menu>
+    </div>
+
+    <script src="./animation.js"></script>
+</body>
+</html>

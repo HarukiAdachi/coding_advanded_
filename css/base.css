@@ -1,0 +1,507 @@
+@charset "UTF-8";
+/* reset */
+body, h1, h2, h3, h4, h5, h6, p, address,
+ul, ol, li, dl, dt, dd, img, form, table, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: none;
+	/* font-style: normal;
+	font-weight: normal;
+	font-size: 100%; 
+	text-align: left;
+	list-style-type: none;
+	border-collapse: collapse;*/
+}
+
+textarea { font-size: 100%; vertical-align:middle;}
+img { border-style: none; display: block; }
+hr { display: none; }
+em{font-style: normal}
+input{line-height:auto;vertical-align:middle;}
+strong.more{color:#c30}
+a{text-decoration: none;}
+
+
+body {
+	font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body.html{ 
+	background-color: #FFEFD5;
+}
+
+/* フッターのバクグラ背景 */
+#hooter{
+	display: flex;
+	background-color: lightgray;
+}
+/* メニュー */
+#menu1{
+	margin-left: 1200px;
+}
+
+/* ハンバーガーメニュー非表示用 */
+.menu-txt{
+	display: none;
+}
+.p-sp-nav_li{
+	display:none;
+}
+
+/* 大題名 */
+#bigtop{
+	margin-left: 225px;
+}
+
+/* 例のjs */
+.swiper {
+	width: 100%;
+	height: 600px;
+  }
+
+/* swiper.jsで使った写真 */
+.topfoods{
+	/* display: flex; */
+	width: 100%;
+	height: 600px;
+	object-fit: cover;
+}
+
+/* 「新型コロナ」 の大々的な題名の箱的な概念*/
+#withcorona{
+	background-color: #FFEFD5;
+}
+
+/* 折り畳み部分の題名のやつ */
+.topic{
+	font-size: xx-large;
+	background-color: #FFC7AF;
+	margin-left: 225px;
+	list-style-type: square;
+	padding-left: 25px;
+}
+
+/* topicの下の小リスト */
+.cir{
+	list-style-type: disc;
+	margin-left: 250px;
+	font-size: x-large;
+}
+
+/* 箱の空白 */
+.blank{
+	margin-bottom: 400px;
+}
+
+/* 箱 */
+.block{
+	opacity: 0; 
+    transition: all 2s; 
+}
+
+/* jsのフェードイン */
+.fadeIn{
+	opacity: 1;
+}
+
+/* explanの見出し部分 */
+.foods{
+	margin-top: 50px;
+	margin-left: 225px;
+}
+
+/* 各商品の説明 */
+.explan{
+	display: flex;
+}
+
+/* 説明の対象画像 */
+.expic{
+	object-fit: cover;
+	margin-left: 225px;
+	width: 550px;
+	height: 400px;
+}
+
+/* explanの説明 */
+.index1{
+	margin-top: 25px;
+	margin-left: 200px;
+	margin-right: 420px;
+	font-size: 20px;
+	font-weight: 500;
+}
+
+/* 文字通り住所 */
+#locate{
+	display: flex ;
+	background-color: black;
+	color:white;
+	margin-top: 50px;
+	margin-right: 350px;
+	margin-left: 225px;
+}
+
+/* Addressって書くだけ */
+#address{
+	margin-top: 50px;
+	margin-left: 25px;
+	font-size: 25px;
+}
+
+/* 住所の詳細 */
+.detailing{
+	margin-left: 25px;
+}
+
+/* 営業時間 */
+#times{
+	margin-top: 50px;
+	margin-left: 25px;
+	font-size: 25px;
+	margin-right: 150px;
+}
+
+/* 土日の営業時間 */
+.parttime{
+	margin-left: 25px;
+}
+
+/* 珈琲の写真 */
+#coffee2{
+	/* margin-left: 200px; */
+	text-align: right;
+}
+
+/* 他店舗 */
+#lct{
+	background-color: #FFEFD5
+}
+
+/* 店舗一覧 */
+#introduction{
+	display: flex;
+	justify-content: center;
+}
+
+/* 他店舗の枠組み */
+#other{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* 店舗写真 */
+.otherpic{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background-position: center; 
+}
+
+
+/* 店舗住所 */
+.loc{
+	margin-left: 100px;
+}
+
+/* その他のメニュー */
+#mindex{
+	background-color: darkgray;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+} 
+
+@media (max-width: 480px) {
+
+	/* これ書かなくてもいい？ */
+	body html{ 
+		background-color: #FFEFD5;
+		margin: 0;
+        padding: 0;
+	}
+
+	/* 右上のメニューをなくす */
+	#menu1{
+		display: none;
+	}
+
+	/* タイトル */
+	#hooter{
+		display: flex;
+	}
+	#sitename{
+		margin-top: 5px;
+		margin-right: 200px;
+	}
+
+	/* ハンバーガーメニュー非表示用 */
+	.menu-txt{
+		display: flex;
+		margin-left: 10px;
+	}
+	.p-sp-nav_li{
+		display:flex;
+	}
+
+	/* 単純な文字サイズ */
+	#sitename{
+		font-size: 24px;
+	}
+
+
+	/* jsサイズ */
+	.swiper{
+		width: 100%;
+		height: auto;
+	}
+
+	/* 写真の大きさ */
+	.topfoods{
+		width: 100%;
+		height: 300px;
+		object-fit: cover;
+	}
+
+	/* 新型コロナの題名の部分 */
+	#bigtop{
+		font-size: 20px;
+		margin-left: 5px;
+		margin-right: 5px;
+		text-align: left;
+	}
+
+	/* 展開前の題名の部分 */
+	.topic {
+		font-size: large;
+		margin-left: 10px;
+		padding-left: 5px;
+	}
+
+	/* 展開後の部分 */
+	.cir {
+		margin-left: 20px;
+		font-size: medium;
+		padding-left: 10px;
+    }
+
+	/* fadeInする写真のやつ */
+	.foods{
+		text-align: left;
+		margin-top: 15px;
+		margin-left: 5px;
+		font-size: 18px;
+	}
+
+	/* 説明部分の写真 */
+	.expic{
+		width: 100%;
+		height: auto;
+		margin: 10px 0;
+	}
+
+	/* 説明部分のまとめ箱みたいな考え */
+	.explan {
+		flex-direction: column;
+		text-align: center;
+	  }
+	
+	  /* 説明 */
+	.index1{
+		font-size: 16px;
+		margin: 15px 0px;
+		text-align: left;
+	}
+
+	/* 営業時間等々の箱 */
+	#locate{
+		flex-direction: column;
+		text-align: center;
+		padding: 15px;
+		margin:  20px 10px;
+	}
+
+	/* 住所 */
+	#address{
+		font-size: 18px;
+		margin: 10px 0px;
+	}
+
+	/* 時間 */
+	#times{
+		font-size: 18px;
+		margin: 10px 0px;
+	}
+
+	/* 他店舗は非表示 */
+	#lct{
+		display: none;
+	}
+
+	/* 一番下の部分の箱 */
+	#mindex {
+		display: flex;
+		background-color: darkgray;
+		margin-top: 20px;
+		margin-left: -25px;
+		font-size: 15px;
+	}
+
+	/* プライバシーポリシー等々 */
+	#menu2 {
+		display: flex;
+		gap: 10px;
+		margin-left: -35px;
+	}
+
+
+	.l-sp-header {
+		width: 100%;
+		z-index: 10;
+		height: 80px;
+		position: fixed;
+		top: 0;
+		left: 0;
+		display: flex;
+		justify-content: space-between;
+		color: #023047;
+		padding: 9px 20px;
+		background-color: #8ecae6;
+	  }
+	  /* ---------------------------- */
+	  /* ハンバーガーメニューのボタン */
+	  /* ---------------------------- */
+	  .l-sp-header_ham-menu {
+		width: 60px;
+		height: 60px;
+		border-radius: 3px;
+		background-color: #023047;
+		color: #fff;
+		font-size: 13px;
+		font-weight: 400;
+		text-align: right;
+		padding-top: 6px;
+		justify-content: flex-end; 
+	  }
+	  /* ---------------------------- */
+	  .open-btn1 {
+		position: relative; /*ボタン内側の基点となるためrelativeを指定*/
+		cursor: pointer;
+		width: 60px;
+		height: 40px;
+		margin-top: 2px;
+	  }
+	  /*ボタン内側:三本線のスタイル*/
+	  .open-btn1 span {
+		display: inline-block;
+		transition: all 0.4s; /*アニメーションの設定*/
+		position: absolute;
+		left: 12px;
+		height: 2px; /*Android端末で線の太さの違い出る対策*/
+		transform: scaleY(0.5) translateY(1px); /*Android端末で線の太さの違い出る対策*/
+		border-radius: 2px;
+		background: #fff;
+		width: 62%;
+	  }
+	  /* 上の線 */
+	  .open-btn1 span:nth-of-type(1) {
+		top: 4px;
+	  }
+	  /* 真ん中の線 */
+	  .open-btn1 span:nth-of-type(2) {
+		top: 14px;
+	  }
+	  /* 下の線 */
+	  .open-btn1 span:nth-of-type(3) {
+		top: 24px;
+	  }
+	  /* ---------------------------- */
+	  /*activeクラスが付与されると線が回転して×に*/
+	  .open-btn1.active span:nth-of-type(1) {
+		top: 8px;
+		left: 16px;
+		transform: translateY(6px) rotate(-45deg);
+		width: 50%;
+		height: 1px; /*Android端末で線の太さの違い出る対策*/
+	  }
+	  .open-btn1.active span:nth-of-type(2) {
+		opacity: 0; /*真ん中の線は透過*/
+	  }
+	  .open-btn1.active span:nth-of-type(3) {
+		top: 20px;
+		left: 16px;
+		transform: translateY(-6px) rotate(45deg);
+		width: 50%;
+		height: 1px; /*Android端末で線の太さの違い出る対策*/
+	  }
+	  /* ---------------------------- */
+	  /* メニュー本体 */
+	  /* ---------------------------- */
+	  /* 暗い背景 */
+	  .p-sp-nav-bg{
+		display: none;
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(2,48,71, 0.6);
+		top: 0;
+		left: 0;
+		/* z-index: 5; */
+		transition: all 0.3s;
+	  }
+	  /* .bg-activeが付与された時 */
+	  .p-sp-nav-bg.bg-active{
+		display: block;
+		transition: all 0.3s;
+	  }
+	  
+	  /* ナビゲーション全体を囲うタグ */
+	  #sp-g-nav {
+		position: fixed;
+		z-index: 7;
+		color: #fff;
+		background-color: #023047;
+		font-size: 16px;
+		font-weight: 300;
+		line-height: 1.3;
+		width: 100%;
+		top: -120%;
+		transition: all 0.3s;
+	  }
+	  /*アクティブクラスがついたら表示位置変更*/
+	  #sp-g-nav.panel-active {
+		width: 100%;
+		top: 80px;
+		transition: all 0.3s;
+	  }
+	  /* ナビゲーション本体 */
+	  .p-sp-nav_ul{
+		width: 100%;
+	  }
+	  .p-sp-nav_li {
+		height: 38px;
+		border-bottom: 1px solid #fff;
+	  }
+	  .p-sp-nav_li:last-of-type {
+		border-bottom: 0;
+	  }
+	  .p-sp-nav_a{
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		padding-left: 2em;
+	  }
+	  
+	
+}
